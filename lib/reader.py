@@ -4,6 +4,7 @@
 from sys import stdin
 from re import compile
 
+# Regex to match the starting comment line
 KENKEN_REGEX = compile(r"^#kenken.*")
 
 def get_input():
@@ -32,6 +33,7 @@ def get_row_col(num):
 
     return (row, col)
 
+# Helper function to convert a cell string to a 2-tuple of block number and operator
 def get_operator_block(cell):
     cell = cell.lstrip("r")
     cell = cell.split(".")
@@ -59,6 +61,8 @@ def extract_puzzle(cell_string_array):
 
         block, operator = get_operator_block(cell_string_array[i])
 
+        # We make the assumption that everytime a block is encountered
+        # it is the next number after the length of the array.
         if block >= len(puzzle):
             puzzle.append((None, []))
 
