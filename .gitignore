@@ -4,3 +4,11 @@ cookies.txt
 __pycache__
 
 out
+
+*.aux
+*.out
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+.DS_STORE
