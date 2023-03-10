@@ -3,6 +3,6 @@
 from lib.reader import get_puzzle_array
 
 if __name__ == "__main__":
-    get_puzzle_array()
+    puzzle = get_puzzle_array()
 
-
+    print(puzzle)
