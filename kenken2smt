@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 
 from lib.reader import get_puzzle_array
+from lib.converter import smt_converter
 
 if __name__ == "__main__":
     puzzle = get_puzzle_array()
+    # print(puzzle)
 
-    print(puzzle)
+    smt_string = smt_converter(puzzle)
+
+    print(smt_string)
