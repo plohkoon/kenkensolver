@@ -15,7 +15,7 @@ def smt_converter(puzzle):
     # set the range for each varaiable
     for i in range(49):
         variable = "V" + str(i)
-        set_range = "(assert (and (> " + variable + " 0) (< " + variable + " 10)))\n"
+        set_range = "(assert (and (> " + variable + " 0) (< " + variable + " 8)))\n"
         solver_input += set_range
 
     # constraints that variables have to be unique on each row
